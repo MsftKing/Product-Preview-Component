@@ -1,6 +1,6 @@
 :root {
-    --primary-green-500: Green 500: hsl(158, 36%, 37%);
-    --primary-green-700: Green 700: hsl(158, 42%, 18%);
+    --primary-green-500: hsl(158, 36%, 37%);
+    --primary-green-700: hsl(158, 42%, 18%);
     --neutral-black: hsl(212, 21%, 14%);
     --neutral-grey: hsl(228, 12%, 48%);
     --neutral-cream: hsl(30, 38%, 92%);
@@ -14,10 +14,20 @@
 
 html {
     background-color: rgb(235, 223, 207);
+    height: 100vh;
+    width: 100vw;
+
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+
 }
 
 .card {
     display: flex;
+    justify-content: left;
     text-align: center;
     width: 700px;
     height: 500px;
@@ -27,29 +37,28 @@ html {
 }
 
 .left {
-    position: static;
+    position: relative;
     display: block;
-    width: 50vw;
+    width: 350px;
     height: inherit;
     box-sizing: border-box;
 }
 
-img {
-    z-index: 0;
-    width: inherit;
-    height: inherit;
+img.left {
+    position: absolute;
+    top: 0;
+    left: 0;
     object-fit: cover;
-    box-sizing: border-box;
     border-bottom-left-radius: 10px;
     border-top-left-radius: 10px;
 }
 
 .right {
-    display: block;
-    position: static;
     text-align: left;
-    padding: 1em;
-    margin: 1em;
+    width: 350px;
+    margin-left: 1em;
+    margin-top: 1em;
+    padding-left: 1em;
 }
 
 h1, h2, p, button {
@@ -60,4 +69,48 @@ h1 {
     font-weight: var(--font-weight-small);
     font-size: var(--font-size);
     font-kerning: auto;
+    letter-spacing: .5em;
+    color: var(--neutral-grey);
+}
+
+h2 {
+    font-family: var(--font-secondary);
+    font-weight: var(--font-weight-large);
+    font-size: xx-large;
+    font-style: bold;
+    margin-bottom: .5em;
+    padding-bottom: .5em;
+    color: var(--neutral-black);
+}
+
+p {
+    font-family: var(--font-primary);
+    font-size: var(--font-size);
+    color: var(--neutral-grey);
+}
+
+p.price {
+    font-family: var(--font-secondary);
+    font-size: 25px;
+    color: var(--primary-green-700);
+    font-weight: var(--font-weight-large);
+}
+
+.deal {
+    font-family: var(--font-secondary);
+    font-size: var(--font-size);
+    color: var(--primary-green-500);
+    font-weight: var(--font-weight-small);
+    padding-left: 1em;
+    text-decoration: line-through var(--neutral-grey);
+}
+
+button {
+    width: 15em;
+    height: 3rem;
+    background-color: var(--primary-green-500);
+    border: none;
+    border-radius: 5px;
+    color: var(--neutral-white);
+    font-size: 20px;
 }
