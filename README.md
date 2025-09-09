@@ -25,7 +25,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: (https://your-solution-url.com)
+- Solution URL: (https://www.frontendmentor.io/solutions/product-review-card-component-q94k61x8n5)
 - Live Site URL: (https://preview-component-card-rk.netlify.app/)
 
 ## My process
