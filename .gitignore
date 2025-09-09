@@ -17,3 +17,4 @@
 
 #ignore template files and such 
 .README-template.md
+.style-guide.md
